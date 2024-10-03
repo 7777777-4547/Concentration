@@ -1,13 +1,13 @@
 package net.deechael.concentration.fabric.mixin;
 
 import com.google.common.collect.ImmutableList;
-import me.jellysquid.mods.sodium.client.gui.SodiumGameOptionPages;
-import me.jellysquid.mods.sodium.client.gui.options.Option;
-import me.jellysquid.mods.sodium.client.gui.options.OptionGroup;
-import me.jellysquid.mods.sodium.client.gui.options.OptionImpl;
-import me.jellysquid.mods.sodium.client.gui.options.control.CyclingControl;
-import me.jellysquid.mods.sodium.client.gui.options.control.TickBoxControl;
-import me.jellysquid.mods.sodium.client.gui.options.storage.MinecraftOptionsStorage;
+import net.caffeinemc.mods.sodium.client.gui.SodiumGameOptionPages;
+import net.caffeinemc.mods.sodium.client.gui.options.Option;
+import net.caffeinemc.mods.sodium.client.gui.options.OptionGroup;
+import net.caffeinemc.mods.sodium.client.gui.options.OptionImpl;
+import net.caffeinemc.mods.sodium.client.gui.options.control.CyclingControl;
+import net.caffeinemc.mods.sodium.client.gui.options.control.TickBoxControl;
+import net.caffeinemc.mods.sodium.client.gui.options.storage.MinecraftOptionsStorage;
 import net.deechael.concentration.Concentration;
 import net.deechael.concentration.FullscreenMode;
 import net.deechael.concentration.fabric.config.ConcentrationConfigFabric;
@@ -34,7 +34,7 @@ public class SodiumVideoOptionsScreenMixin {
     @Final
     private static MinecraftOptionsStorage vanillaOpts;
 
-    @ModifyArg(method = "general", at = @At(value = "INVOKE", target = "Lme/jellysquid/mods/sodium/client/gui/options/OptionPage;<init>(Lnet/minecraft/network/chat/Component;Lcom/google/common/collect/ImmutableList;)V"), index = 1)
+    @ModifyArg(method = "general", at = @At(value = "INVOKE", target = "Lnet/caffeinemc/mods/sodium/client/gui/options/OptionPage;<init>(Lnet/minecraft/network/chat/Component;Lcom/google/common/collect/ImmutableList;)V"), index = 1)
     private static ImmutableList<OptionGroup> inject$general(ImmutableList<OptionGroup> groups) {
         List<OptionGroup> newGroups = new ArrayList<>();
 

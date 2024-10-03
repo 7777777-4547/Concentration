@@ -19,7 +19,7 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
 
     modImplementation "maven.modrinth:modmenu:11.0.0"
-    modImplementation "maven.modrinth:sodium:mc1.21-0.5.11"
+    modImplementation "maven.modrinth:sodium:mc1.21-0.6.0-beta.2-fabric"
     modImplementation "maven.modrinth:vulkanmod:0.4.3-fabric,1.21"
 }
 
